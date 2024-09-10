@@ -20,6 +20,8 @@ urlpatterns = [
     path("Signup/", views.Signup, name="Signup"),
     path("Studentlogin/", views.Studentlogin, name="Studentlogin"),
     path("form/",views.StudentRegistration, name="StudentRegistration"),
+    path("form1/",views.forms1, name="form1"),
+    
 
 
 

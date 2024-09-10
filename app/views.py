@@ -43,3 +43,15 @@ def StudentRegistration(request):
     else:
         form=StudentRegistrationForm()
     return render(request, "templates/online_admissions.html",{"form": form})
+
+
+from .forms import Studentfeesform
+
+def forms1(request):
+    if request.method=="POST":
+        form=Studentfeesform(data=request.POST)
+        if form.is_valid():
+            form.save()
+    else:
+        form=Studentfeesform()
+    return render(request,"templates/fees.html",{"form":form})
